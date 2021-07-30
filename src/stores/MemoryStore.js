@@ -1,23 +1,27 @@
 export default class MemoryStore {
   constructor() {
-    this.data = new Map
+    this.data = new Map();
   }
 
   sessionExists(sessionId) {
-    return this.data.has(sessionId)
+    return this.data.has(sessionId);
   }
 
   getSessionById(sessionId) {
-    return this.data.get(sessionId)
+    return this.data.get(sessionId);
   }
 
   createSession(sessionId) {
     this.data.set(sessionId, {
-      '_flash': {}
-    })
+      "_flash": {},
+    });
   }
 
   persistSessionData(sessionId, sessionData) {
-    this.data.set(sessionId, sessionData)
+    this.data.set(sessionId, sessionData);
+  }
+
+  destroySession(sessionId) {
+    delete this.data[sessionId];
   }
 }
