@@ -177,4 +177,25 @@ const session = new OakSession(app, store);
 // ...
 ```
 
+### MongoDB
+
+```ts
+import { Application, Router } from "https://deno.land/x/oak/mod.ts";
+import { MongoStore, OakSession } from "https://deno.land/x/sessions/mod.ts";
+
+const app = new Application();
+const store = new MongoStore({
+  uri: "mongodb://127.0.0.1:27017/sessions",
+  collection: "sessions", //optional
+  databaseName: "sessions", //optional
+});
+
+await store.init();
+
+// Attach sessions to middleware
+const session = new OakSession(app, store);
+
+// ...
+```
+
 More stores will be added over time.
