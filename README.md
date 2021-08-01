@@ -21,6 +21,9 @@ supported storage layers:
   server which allows you to use Redis with an HTTP endpoint. This is ideal for
   serverless environments, or anywhere that only HTTP endpoints can be accessed
   (such as Deno Deploy). Requires a Webdis URL.
+- **MongoDB**: Uses a MongoDB database to store session data. Internally, the
+  deno [mongo](https://deno.land/x/mongo) library is used to interact with a
+  MongoDB database.
 
 ## Usage
 
