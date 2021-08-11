@@ -41,7 +41,6 @@ export default class MongoStore {
   }
 
   async persistSessionData(sessionId, sessionData) {
-    console.log(sessionData.data);
     await this.db.collection(this.collection).updateOne({
       sessionid: sessionId,
     }, { $set: { data: sessionData } });
