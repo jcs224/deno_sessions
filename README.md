@@ -1,5 +1,11 @@
-# Deno Sessions
+> ⚠️ **This project is archived.**
+> I've decided to focus specifically on Oak, as maintaining multiple middelware integrations is challenging. All of my development effort is now going into an Oak-specific session middleware:
+> https://github.com/jcs224/oak_sessions
 
+> For those using Opine, a fork of this project is continuing with the multiple-framework approach (including Opine):
+> https://github.com/LangiviTechnology/sessions
+
+# Deno Sessions
 Sessions adds the ability to use sessions with deno web frameworks. It currently supports the following frameworks:
 
 * [**Oak**](https://deno.land/x/oak)
